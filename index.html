@@ -1,0 +1,83 @@
+<html>
+<head>
+<!--Fusion game-->
+<!--From ASH rises the WORLD 0134 5 February 2014-->
+</head>
+
+<style>
+
+*{
+margin: 0px;
+padding: 0px;
+}
+
+body{
+background-color: black;
+}
+
+#canvas{
+position: absolute;
+border: 5px #ff0000 solid;
+background-color: black;
+}
+
+</style>
+<body>
+ 
+<canvas id="canvas" style="display: none;"></canvas>
+<!--audio id="song">
+  <source src="pop.mp3" type="audio/mpeg">
+</audio-->
+
+<div id="start_screen" style="display: block;">
+
+<center><font color="red" size="10px">FUSION</font></center>
+<BR><BR>
+<center>
+<font color="white" size="5px">Players&nbsp </font>
+<select id="num_players">
+<!--option value="1"></option-->
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</center>
+<BR>
+<center>
+<font color="white" size="5px">Map&nbsp </font>
+<select id="grid_size">
+<option value="g1">10 X 6</option>
+<option value="g2">15 X 10</option>
+</select>
+</center>
+
+<BR><BR>
+<center>
+<button onclick="fusion()"><B><font color="#666666" size="5px">START FUSION</font><B></button>
+</center>
+<BR><BR>
+<center>
+<font size="3px" color="white">
+Fill each grid till its critical capacity.<BR>
+At extreme capacity, the grid explodes and starts a reaction across the map. <BR><BR>
+Eliminate all opponents to win
+<BR>Play . Learn . Conquer
+</font>
+</center>
+
+</div>
+
+<div id="game_over" style="background-color: #222222; position: absolute; display: none; opacity: 0.8;">
+<center><font size="10px" color="white"><div id="won"></div></font><center><BR>
+<center><font size="15px" color="red"><button onclick="location.reload();">START FUSION</button></font><center>
+<div> 
+
+<script type="text/javascript" src="fusion.js">
+</script>
+
+</body>
+</html>
